@@ -1,0 +1,99 @@
+$globalPadding: 20px;
+$globalThemeColor: #3d3d3d;
+$globalThemeBgColor: #f1f1f1;
+
+div {
+    color: $globalThemeColor;
+}
+
+.main-outer-skin {
+    background-color: $globalThemeBgColor;
+    min-height: 100vh; 
+}
+
+/* Blink for Webkit and others
+(Chrome, Safari, Firefox, IE, ...)
+*/
+
+@keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+  }
+
+.blink{
+    color: red;
+    text-decoration: blink;
+    animation-name: blinker;
+    animation-duration: 0.6s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
+}
+
+footer {
+    padding: $globalPadding;
+    box-sizing: border-box;
+    border-top: 3px solid lighten($globalThemeColor, 55);
+
+    p {
+        text-align: center;
+    }
+}
+
+header {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-bottom: 3px solid lighten($globalThemeColor, 55);
+}
+
+main {
+    padding: $globalPadding;
+}
+
+.c-row {
+    display: flex;
+    padding: $globalPadding;
+}
+
+.c-col-3 {
+    flex: 3;
+}
+
+.c-col-1 {
+    flex: 1;
+}
+
+.c-main-nav {
+    float: right;
+    ul {
+        padding-left: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: lighten($globalThemeBgColor, 15);
+
+            a {
+                text-decoration: none;
+                color: $globalThemeColor;
+            }
+        }
+    }
+}
+
+aside {
+    margin: 0 auto;
+    h2 {
+        margin:0 auto;
+        text-align: center;
+    }
+    p {
+        margin: 0px auto;
+        max-width: 60%;
+        img {
+            width: 90%;
+        }
+    }
+}
